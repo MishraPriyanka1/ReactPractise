@@ -1,0 +1,28 @@
+function tick() {
+  seconds = new Date().getSeconds();
+  print = "";
+  if(seconds%3===0)
+    {
+      this.print = "Fizz";
+    }
+    else if(seconds%15===0)
+    {
+      this.print = "FizzBuzz"
+    }
+  else if(seconds%5===0)
+  {
+    this.print = "Buzz";
+  }
+  
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>{seconds}</h2>
+      <h3>{print}</h3>
+    </div>
+  );
+  // highlight-next-line
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
